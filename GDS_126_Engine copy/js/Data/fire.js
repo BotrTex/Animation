@@ -29,24 +29,24 @@ var fireData ={
 			cycle:true,
 			frames:
 			[
+				
 				{width:64, height:64, startX:0, startY:0},
 				{width:64, height:64, startX:131, startY:5},
 				{width:64, height:64, startX:260, startY:0},
 			]
 		},
 		//The walwidth:128, height:128,
-		walk:
+		explode:
 		{
 			fps:8,
-			cycle:true,
+			cycle:false,
 			frames:
 			[
-				{width:380, height:380, startX:9288, startY:0},
-				{width:380, height:380, startX:9804, startY:0},
-				{width:380, height:380, startX:10320, startY:0},
-				{width:380, height:380, startX:10836, startY:0},
-				{width:380, height:380, startX:11352, startY:0},
-				{width:380, height:380, startX:11868, startY:0},
+				{width:64, height:64, startX:393, startY:0},
+				{width:90, height:90, startX:487, startY:0},
+				{width:90, height:90, startX:603, startY:0},
+				{width:1, height:1, startX:0, startY:0},
+				
 			]
 		},
 		//The jump animation 

@@ -168,7 +168,7 @@ gameStates[`level1`] = function()
 			bullets[currentBullet].x = wiz.x-level.x + (wiz.dir * 96) ;
 			bullets[currentBullet].y = wiz.y + 20;
 			bullets[currentBullet].dir = wiz.dir;
-			
+			bullets[currentBullet].changeState("idle");
 			sounds.play(`Whoosh`)
 			
 
@@ -311,13 +311,18 @@ gameStates[`level1`] = function()
 		bullets[i].move()
 		bullets[i].play(function(){return}).drawSprite()
 		//bullets[i].angle+=10
-		while(g1.collide(bullets[i].bottom) && bullets[i].vy>=0)
-		{
-			
-			bullets[i].vy=0;
-			bullets[i].y--;
-			
+		if(g1.collide(bullets[i].right)&& bullets[i].currentState == "idle") {
+			console.log("bullet hitting wall") 
+			bullets[i].changeState(`explode`)
+			bullets[i].vx=0;
 		}
+		// while(g1.collide(bullets[i].bottom) && bullets[i].vy>=0)
+		// {
+			
+		// 	bullets[i].vy=0;
+		// 	bullets[i].y--;
+			
+		// }
 	}
 
 	
